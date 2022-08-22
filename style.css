@@ -35,15 +35,66 @@ header{
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 2rem;
-
+    width: 199px;
 }
 
 main{
-    background-color: var(--primary-color);
     flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.title{
+    position: relative;
+    grid-column: 1/-1;
+    place-self: center
+}
+
+.title__text{
+    font-size: 20vw;
+    color: var(--white);
+}
+
+.title__transparent{
+    position: absolute;
+    font-size: 27vw;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff4d;
+    z-index: -1;
+}
+
+.description{
+    grid-column: 1/7;
+    place-self: center start;
+}
+
+.description__title{
+    font-size: 4rem;
+}
+
+.description__text{
+    font-size: 1.2rem;
+    width: 490px;
+}
+
+.action{
+    grid-column: 7/-1;
+    place-self: center end;
+    height: 100px;
+    width: 411px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 3rem;
+    text-decoration: none;
 }
 
 footer{
-    background-color: var(--primary-color);
     height: none;
+    text-align: center;
+    color: var(--secondary-color);
 }
