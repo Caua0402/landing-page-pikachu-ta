@@ -1,15 +1,14 @@
-/*Reset*/
+/* RESET CSS */
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-
 :root{
     --primary-color: #F5CF06;
     --secondary-color: #8E4106;
     --white: #FFFFFF;
-    --space-default: 70px;
+    --space-default:70px;
 }
 
 body{
@@ -17,84 +16,81 @@ body{
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    padding-left: var(--space-default);
     padding-top: var(--space-default);
     padding-right: var(--space-default);
     padding-bottom: 24px;
+    padding-left: var(--space-default);
     font-family: 'Righteous', cursive;
 }
-
 header{
     height: 48px;
 }
-
 .logo{
-    display: flex;
-    align-items: center;
+    display: inline-flex;
     gap: 16px;
+    align-items: center;
+    font-size: 2rem;
     text-decoration: none;
     color: var(--secondary-color);
-    font-size: 2rem;
-    width: 199px;
 }
-
 main{
     flex-grow: 1;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12,1fr);
 }
-
+.pikachu-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    z-index: 1;
+}
 .title{
     position: relative;
     grid-column: 1/-1;
-    place-self: center
+    place-self: end center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 .title__text{
     font-size: 20vw;
     color: var(--white);
 }
-
 .title__transparent{
     position: absolute;
     font-size: 27vw;
-    top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #ffffff4d;
     z-index: -1;
+    transform: translateY(-35%);
+    color: #FFFFFF55;
 }
-
 .description{
     grid-column: 1/7;
     place-self: center start;
+    color: var(--secondary-color);
+    z-index: 1;
 }
-
 .description__title{
     font-size: 4rem;
 }
-
 .description__text{
     font-size: 1.2rem;
-    width: 490px;
+    width: 500px;
 }
-
 .action{
     grid-column: 7/-1;
     place-self: center end;
-    height: 100px;
     width: 411px;
+    height: 100px;
     background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
+    color: var(--white);
     font-size: 3rem;
     text-decoration: none;
 }
-
 footer{
-    height: none;
+    font-size: 1rem;
     text-align: center;
     color: var(--secondary-color);
-}
