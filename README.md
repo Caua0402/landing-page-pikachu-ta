@@ -1,1 +1,1 @@
-# lading-page-pikachu-ta
+# landing-page-pikachu-ta
